@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+}
+.images{
+    padding-left: 2.5px;
+    padding-top:calc(99vw/20);
+}
+
+.header {
+    height: calc(99vw/20);
+    background-color: rgb(104, 54, 54);
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+    z-index: 9999;
+  }
+.header p{
+    font-family: 'Mr De Haviland', cursive;
+    text-align: center;
+    font-size:3.5vw;
+    font-weight: bold;
+    margin:0;
+}
+  
+.hvrbox,
+.hvrbox * {
+	box-sizing: border-box;
+}
+.hvrbox {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+    width:calc(99vw/5);
+    height: calc(99vw/5);
+    border:0px;
+    margin: -3px -2px -2px -2px;
+}
+.hvrbox img {
+	position: relative;
+    width:calc(99vw/5);
+    height: calc(99vw/5);
+    object-fit:cover;
+    border:0px;
+    margin:0px;
+    padding:0px;
+}
+.hvrbox img{
+	display: block;
+}
+.hvrbox .hvrbox-layer_top {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 15px;
+	transition: all 0.4s ease-in-out 0s;
+}
+.hvrbox-text {
+    opacity: 0;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+    opacity: 1;
+    outline: 1px solid white; 
+    outline-offset:-10px;    
+}
+
+.hvrbox .hvrbox-text {
+    opacity: 1;
+	text-align: center;
+	font-size: 18px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modal-window {
+    position: fixed;
+    background-color: rgba(200, 200, 200, 0.75);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+  
+  .modal-window:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .modal-window>div {
+    width: calc(99vw/2);
+    position: relative;
+    margin: 10% auto;
+    padding: 2rem;
+    background: #fff;
+    color: #444;
+  }
+
+  
+  .division{
+    display: flex;
+  }
+  .left {
+    width:calc(99vw/4);
+
+  }
+  .left img {    
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+  .right {
+    width:calc(99vw/4);
+    font-size: 18px;
+  }
+  
+  .modal-window header {
+    font-weight: bold;
+  }
+  
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+  }
+  
+  .modal-close:hover {
+    color: #000;
+  }
+  
+  .modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px 0;
+    text-align: center;
+  }
